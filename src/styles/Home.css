@@ -1,0 +1,10 @@
+.Home-staff{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.Home-staff-details{
+    border: black solid 1px;
+    border-radius: 5%;
+    margin: 5px
+}

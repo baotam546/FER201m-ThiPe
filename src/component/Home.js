@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import '../styles/Home.css';
 
 const Home = () => {
   const [staffData, setStaffData] = useState([]);
@@ -24,16 +24,20 @@ const Home = () => {
   return (
     <div>
       <h1>Staffs</h1>
+        <div className='Home-staff'>
       {staffData.map((staff) => (
+        <div className='Home-staff-details'>
         <div key={staff.id}>
+          <img src={staff.avatar} alt={staff.name} />
           <h3>
             <Link to={`/details/${staff.id}`}>{staff.name}</Link>
           </h3>
           <p>Address: {staff.address}</p>
           <p>Age: {staff.age}</p>
-          <img src={staff.avatar} alt={staff.name} />
+        </div>
         </div>
       ))}
+        </div>
     </div>
   );
 };
